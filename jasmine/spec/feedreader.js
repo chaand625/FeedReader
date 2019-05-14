@@ -40,11 +40,13 @@ $(function() {
         it('menu change', function(){
             var menuIcon = $('.menu-icon-link');
             menuIcon.click();
-            var classList = $('body').attr('class');
-            expect(classList).not.toContain('menu-hidden');
+            // var classList = $('body').attr('class');
+            // expect(classList).not.toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             menuIcon.click(); 
-            var classList = $('body').attr('class');
-            expect(classList).toContain('menu-hidden');
+            // var classList = $('body').attr('class');
+            // expect(classList).toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
